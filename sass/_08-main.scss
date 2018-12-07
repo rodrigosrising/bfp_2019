@@ -82,3 +82,20 @@ section{
         transform: translate3d(-30px, 0, 0);
     }
 }
+
+// CASES
+.case{
+    &Descricao{
+        h2{
+            font-size: 1.8rem;
+        }
+        h3{
+            font-size: 1.4rem;
+        }
+    }
+    &Objetivo{
+        .title-big{
+            font-size: 1.4rem;
+        }
+    }
+}

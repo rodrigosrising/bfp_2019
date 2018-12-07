@@ -445,6 +445,18 @@ section.space-section {
   transform: translate3d(-30px, 0, 0);
 }
 
+.caseDescricao h2 {
+  font-size: 1.8rem;
+}
+
+.caseDescricao h3 {
+  font-size: 1.4rem;
+}
+
+.caseObjetivo .title-big {
+  font-size: 1.4rem;
+}
+
 #blogHome .noticia {
   width: 100%;
 }

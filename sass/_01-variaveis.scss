@@ -1,0 +1,77 @@
+// FONTES
+@font-face {
+font-family: Gtwall;
+src: url(../../assets/fontsGT-Walsheim-Pro-Light.ttf);
+font-weight: 300;
+}
+@font-face {
+font-family: Gtwall;
+src: url(../../assets/fonts/GT-Walsheim-Pro-Regular.ttf);
+font-weight: 400;
+}
+@font-face {
+font-family: Gtwall;
+src: url(../../assets/fonts/GT-Walsheim-Pro-Medium.ttf);
+font-weight: 500;
+}
+@font-face {
+font-family: Gtwall;
+src: url(../../assets/fonts/GT-Walsheim-Pro-Bold.ttf);
+font-weight: 600;
+}
+@font-face {
+font-family: Gtwall;
+src: url(../../assets/fonts/GT-Walsheim-Pro-Bold.ttf);
+font-weight: 700;
+}
+@font-face {
+font-family: teste;
+src: url(../../assets/fonts/MORPHEUS.woff);
+font-weight: 700;
+}
+$gtwall: 'Gtwall', sans-serif;
+
+$light: 300;
+$normal: 400;
+$medium: 500;
+$semi-bold: 600;
+$bold: 700;
+
+// CORES
+$preto: #000;
+$branco: #FFF;
+$amarelo: #FFED00;
+$cor1: #1D1D1B;
+$cor2: #F9F9F8;
+$cor3: #F7F7F4;
+$cor4: #A8A8A1;
+$cor5: #5E5E57;
+$cor6: #171717;
+$cor7: #379EF2; // azul
+$cor8: #FF9F1C; // laranja
+$cor9: #8953C6; // roxo
+$cor10: #55AF28; // verde
+$cor11: #EF2626; // vermelho
+
+//MIXINGS
+@mixin background-center-cover {
+    background-position: center top;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+@mixin box-shadow {
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+@mixin translate-center {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@mixin translate-bottom {
+    bottom: 30%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+}

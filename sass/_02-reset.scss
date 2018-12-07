@@ -1,0 +1,207 @@
+body,
+html {
+    overflow-x: hidden;
+    background: $branco;
+    color: $cor1;
+    font-family: $gtwall;
+    font-weight: $light;
+}
+
+/*==========================NOVO=============================*/
+
+:focus {
+    outline: none;
+}
+
+::selection {
+    background: $cor1;
+    color: $branco;
+    text-shadow: none;
+}
+
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+    color: $cor2;
+    /*text-shadow: 1px 1px 1px #080707;*/
+}
+
+input::-moz-placeholder,
+textarea::-moz-placeholder {
+    color: $cor2;
+    /*text-shadow: 1px 1px 1px #080707;*/
+}
+
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+    color: $cor2;
+    /*text-shadow: 1px 1px 1px #080707;*/
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: $cor2;
+    /*text-shadow: 1px 1px 1px #080707;*/
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+hr {
+    border-bottom: 1px solid lighten($cor3, 15);
+    width: 100%;
+}
+
+[type='text'],
+[type='password'],
+[type='date'],
+[type='datetime'],
+[type='datetime-local'],
+[type='month'],
+[type='week'],
+[type='email'],
+[type='number'],
+[type='search'],
+[type='tel'],
+[type='time'],
+[type='url'],
+[type='color'],
+textarea {
+    border-color: lighten( $cor2, 65%);
+    background-color: $branco;
+    color: #828282;
+    text-shadow: 1px 1px 1px lighten( $cor2, 60%);
+}
+
+[type='text']:focus,
+[type='password']:focus,
+[type='date']:focus,
+[type='datetime']:focus,
+[type='datetime-local']:focus,
+[type='month']:focus,
+[type='week']:focus,
+[type='email']:focus,
+[type='number']:focus,
+[type='search']:focus,
+[type='tel']:focus,
+[type='time']:focus,
+[type='url']:focus,
+[type='color']:focus,
+textarea:focus {
+    border-color: transparent;
+    background-color: $branco;
+    box-shadow: inset 2px 2px 8px lighten($preto, 85%);
+}
+
+
+p{
+    font-weight: $light;
+    line-height: 170%;
+    font-size: 16px;
+    margin-bottom: 25px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: $gtwall;
+    font-weight: 900;
+}
+
+
+
+
+// CORES
+.branco{
+    color: $branco;
+}
+.preto{
+    color: $preto;
+}
+.amarelo{
+    color: $amarelo;
+}
+.cor1{
+    color: $cor1;
+}
+.cor2{
+    color: $cor2;
+}
+.cor3{
+    color: $cor3;
+}
+.cor4{
+    color: $cor4;
+}
+.cor5{
+    color: $cor5;
+}
+.cor6{
+    color: $cor6;
+}
+.cor7{
+    color: $cor7;
+}
+.cor8{
+    color: $cor8;
+}
+.cor9{
+    color: $cor9;
+}
+.cor10{
+    color: $cor10;
+}
+.cor11{
+    color: $cor11;
+}
+
+// BACKGROUNDS
+
+.bg-branco{
+    background-color: $branco;
+}
+.bg-preto{
+    background-color: $preto;
+}
+.bg-amarelo{
+    background-color: $amarelo;
+}
+.bg-cor1{
+    background-color: $cor1;
+}
+.bg-cor2{
+    background-color: $cor2;
+}
+.bg-cor3{
+    background-color: $cor3;
+}
+.bg-cor4{
+    background-color: $cor4;
+}
+.bg-cor5{
+    background-color: $cor5;
+}
+.bg-cor6{
+    background-color: $cor6;
+}
+.bg-cor7{
+    background-color: $cor7;
+}
+.bg-cor8{
+    background-color: $cor8;
+}
+.bg-cor9{
+    background-color: $cor9;
+}
+.bg-cor10{
+    background-color: $cor10;
+}
+.bg-cor11{
+    background-color: $cor11;
+}
+.bg-dark{
+    color: $cor2;
+}

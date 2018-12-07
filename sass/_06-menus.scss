@@ -1,0 +1,56 @@
+.navButton{
+    background-color: $cor1;
+    color: $amarelo;
+    height: 50px;
+    width: 50px;
+    font-size: 1.2rem;
+    margin-left: -0.987rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    // border-right: 1px solid lighten($cor3, 17);
+}
+.menuHeader{
+    font-family: $gtwall;
+    font-weight: $normal;
+    text-transform: uppercase;
+    li{
+        border-left: 1px solid lighten($cor3, 20);
+        // &:last-child{
+        //     border: none;
+        // }
+        a{
+            height: 50px;
+            display: flex;
+            align-items: center;
+            color: $preto;
+            &:hover, &:focus, &.active{
+                background: $cor2;
+            }
+        }
+    }
+}
+.menu{
+    &Fazemos{
+        li{
+            a{
+                padding: 0;
+                h1{
+                    margin: 0;
+                    font-weight: $bold;
+                    transition: 0.3s all ease-in-out;
+                }
+                &:hover{
+                    h1{
+                        color: $branco;
+                    }
+                }
+                &:hover ~ a{
+                    h1{
+                        color: rgba($branco, 0.3);
+                    }
+                }
+            }
+        }
+    }
+}

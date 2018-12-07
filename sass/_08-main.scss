@@ -1,0 +1,84 @@
+section{
+    overflow: hidden;
+    transition: 0.3s background-color ease-in-out;
+    // border-top: 1px solid lighten($cor4, 30);
+    &.space-section{
+        padding-top: 10vh;
+        padding-bottom: 10vh;
+    }
+}
+.bodyContainer{
+    background: $cor2;
+    min-height: 50vh;
+    margin-top: 50px;
+}
+
+.title-big {
+    font-weight: $bold;
+    font-size: 54px;
+    line-height: 1;
+}
+
+// QUEM SOMOS HOME
+
+.breadcrumbsContainer{
+    .breadcrumbs{
+        margin: 0;
+        li{
+            color: $cor1;
+            font-weight: $bold;
+            &:after{
+                color: $cor1;
+                content:"|";
+            }
+        }
+        a, .disabled{
+            color: $cor1;
+            font-weight: $normal;
+        }
+    }
+}
+.bg-dark{
+    .breadcrumbsContainer{
+        .breadcrumbs{
+            margin: 0;
+            color: $cor2;
+            li{
+                color: $cor2;
+                font-weight: $bold;
+                &:not(:last-child)::after{
+                    color: $cor2;
+                    font-weight: $bold;
+                }
+            }
+            a, .disabled{
+                color: $cor2;
+                font-weight: $normal;
+            }
+        }
+    }
+}
+
+
+// PORTFOLIO
+.portfolio{
+    &Home{
+
+    }
+    &-cover{
+        overflow: hidden;
+    }
+    &-foto{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        background-size: cover;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        width: calc(100% + 50px);
+        transition: opacity .4s, transform .4s;
+        transform: translate3d(-30px, 0, 0);
+    }
+}

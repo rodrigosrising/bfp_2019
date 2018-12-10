@@ -1,67 +1,75 @@
-footer.footer.hide
-    .grid-container
+footer.footer.space-section.bg-dark.hide
+    .grid-container.fluid
         .grid-x.grid-margin-x.align-middle
+            .cell.small-12.medium-10.medium-offset-1
+                .grid-container.full
+                    .grid-x.grid-padding-x.grid-margin-x
+                        .cell.small-12.medium-8.large-5
+                            address
+                                div #[i.fas.fa-map-marker-alt] Av Cândido Hartmann, 528, sala 56 - Curitiba – PR
+                                //- div #[i.fas.fa-clock] Seg á Sex dás 8:30 às 18H
+                                div #[i.fas.fa-envelope-open-text] falecom@blackflag.com.br
+                                div.tel #[i.fas.fa-phone] +55 41 3151-2607
 
-            .cell.small-12.medium-4.large-3
-                img(src="assets/img/logosite2.png" alt="" class="custom-logo")
+                        .cell.small-12.large-4.tags
+                            span.label Contabilidade
+                            span.label Curitiba
+                            span.label Receita
+                            span.label Escrituração
+                            span.label Plano de contas
+                            span.label Ativo
+                            span.label Passivo
+                            span.label Compensação
+                            span.label Balancete
+                            span.label Contador
+                            span.label Previsão
+                            span.label Capital de giro
+                            span.label Depreciação
+                            span.label Faturamento
+                            span.label Imposto de renda
 
-            .cell.small-12.medium-8.large-5
-                address
-                    div #[i.fas.fa-map-marker-alt] Av Cândido Hartmann, 528, sala 72 - Curitiba – PR
-                    //- div #[i.fas.fa-clock] Seg á Sex dás 8:30 às 18H
-                    div #[i.fas.fa-envelope-open-text] contabilidade@barbozaribas.com.br
-                    div.tel #[i.fas.fa-phone] 41 3339-3884
-                    div.tel #[i.fas.fa-mobile-alt] 41 99860-8103
-                    div.tel #[i.fas.fa-mobile-alt] 41 99535-6234
+.mapa
+    .grid-container.full
+        .grid-x
+            .cell.auto
+                iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3603.2187821517714!2d-49.294029684418305!3d-25.430948139159298!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94dce49ca50405f7%3A0x3cd3a42a8350b4ae!2sBlack+Flag+Publicidade!5e0!3m2!1spt-BR!2sbr!4v1544464540659", width="600", height="200", frameborder="0", style="border:0", allowfullscreen)
 
-            .cell.small-12.large-4.tags
-                span.label Contabilidade
-                span.label Curitiba
-                span.label Receita
-                span.label Escrituração
-                span.label Plano de contas
-                span.label Ativo
-                span.label Passivo
-                span.label Compensação
-                span.label Balancete
-                span.label Contador
-                span.label Previsão
-                span.label Capital de giro
-                span.label Depreciação
-                span.label Faturamento
-                span.label Imposto de renda
 
-    .mapa
-        .grid-container.full
-            .grid-x
-                .cell.auto
-                    iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3603.2259767992095!2d-49.29383768449419!3d-25.43070753914957!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94dce3f1aea1d9af%3A0xf96542d9951608bb!2sBarboza+Ribas+Contabilidade+Tribut%C3%A1ria+Ltda!5e0!3m2!1spt-BR!2sbr!4v1543921460454", width="600", height="200", frameborder="0", style="border:0", allowfullscreen)
+.copy.cor4
+    .grid-container.fluid
+        .grid-x.grid-margin-x.align-middle
+            .cell.small-12.medium-10.medium-offset-1
+                .grid-container
+                    .grid-x
+                        .cell.auto
+                            p
+                                small blackflag.com.br &copy;2018
+                        .cell.shrink
+                            ul.menu-parceiros.float-right
+                                li.sinapro-pr
+                                    a(href="") Sinapro
+                                li.cenp
+                                    a(href="") Cenp
 
-    .copy
-        .grid-container
-            .grid-x.text-center
-                .cell.auto
-                    p
-                        small barbozaribas.com.br &copy;2018 - #[a(href="https://blackflag.com.br", target="_blank") Black Flag Publicidade ]
 
-    .chatWhats.button.buttonWide
+    .chatWhats.button.buttonWide.hide
         a(href="") Fale conosco no #[i.fab.fa-whatsapp]
 
 
-.responsiveNav.hide-for-large
-    .responsiveNavCloseButton
-        i.fas.fa-times.fa-2x
-    .grid-container.menuMobile
-        .grid-x.grid-margin-x.grid-padding-x
-            .cell.small-12
-                ul.menu.vertical
-                    li
-                        a(href="index.html") Home
-                    li
-                        a(href="quem-somos.html") Quem Somos
-                    li
-                        a(href="nossos-servicos.html") Nossos Serviços
-                    li
-                        a(href="noticias.html") Notícias
-                    li
-                        a(href="contato.html") Contato
+//- .responsiveNav.hide-for-large
+//-     .responsiveNavCloseButton
+//-         i.fas.fa-times.fa-2x
+//-     .grid-container.menuMobile
+//-         .grid-x.grid-margin-x.grid-padding-x
+//-             .cell.small-12
+//-                 ul.menu.vertical
+//-                     li
+//-                         a(href="index.html") Home
+//-                     li
+//-                         a(href="quem-somos.html") Quem Somos
+//-                     li
+//-                         a(href="nossos-servicos.html") Nossos Serviços
+//-                     li
+//-                         a(href="noticias.html") Notícias
+//-                     li
+//-                         a(href="contato.html") Contato

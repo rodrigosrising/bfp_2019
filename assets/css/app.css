@@ -288,6 +288,7 @@ h6 {
   background-color: #FFF;
   height: 50px;
   border-bottom: 1px solid white;
+  z-index: 2;
 }
 
 .navButton {
@@ -344,28 +345,27 @@ h6 {
   font-weight: 700;
   -webkit-transition: 0.3s all ease-in-out;
   transition: 0.3s all ease-in-out;
-}
-
-.menuFazemos li a:hover h1 {
   color: #FFF;
 }
 
-.menuFazemos li a:hover ~ a h1 {
-  color: rgba(255, 255, 255, 0.3);
+.menuFazemos li a:hover h1 {
+  color: #1D1D1B;
 }
 
 .bannerContainer {
-  height: calc(100vh - 65px);
+  height: calc(100vh - 50px);
   background-color: #1D1D1B;
 }
 
-section {
+section,
+footer {
   overflow: hidden;
   -webkit-transition: 0.3s background-color ease-in-out;
   transition: 0.3s background-color ease-in-out;
 }
 
-section.space-section {
+section.space-section,
+footer.space-section {
   padding-top: 10vh;
   padding-bottom: 10vh;
 }
@@ -391,7 +391,7 @@ section.space-section {
   font-weight: 700;
 }
 
-.breadcrumbsContainer .breadcrumbs li:after {
+.breadcrumbsContainer .breadcrumbs li:not(:last-child)::after {
   color: #1D1D1B;
   content: "|";
 }
@@ -423,14 +423,76 @@ section.space-section {
   font-weight: 400;
 }
 
-.portfolio-cover {
+.caseDescricao h2 {
+  font-size: 1.8rem;
+}
+
+.caseDescricao h3 {
+  font-size: 1.4rem;
+}
+
+.caseObjetivo .title-big {
+  font-size: 1.4rem;
+}
+
+.portfolioContainer {
+  width: 50%;
+  float: left;
+  position: relative;
   overflow: hidden;
+}
+
+.portfolioContainer .inner {
+  padding: 2vw;
+  position: relative;
+  z-index: 2;
+}
+
+.portfolioContainer .link {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.portfolioContainer:hover .portfolio-foto {
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+
+.portfolioContainer:hover .portfolio-foto::after {
+  opacity: 0;
+  -webkit-transform: translate3d(0, -50px, 0);
+  transform: translate3d(0, -50px, 0);
+}
+
+.portfolioHome .square,
+.portfolioPage .square {
+  height: 100%;
+  width: 100%;
+}
+
+.portfolioHome .square .portfolio-foto,
+.portfolioPage .square .portfolio-foto {
+  height: 900px;
+}
+
+.portfolioHome .rect,
+.portfolioPage .rect {
+  height: 50%;
+  width: 100%;
+}
+
+.portfolioHome .rect .portfolio-foto,
+.portfolioPage .rect .portfolio-foto {
+  height: 450px;
 }
 
 .portfolio-foto {
   width: 100%;
   height: 100%;
-  position: absolute;
+  position: relative;
   left: 0;
   top: 0;
   background-size: cover;
@@ -445,16 +507,77 @@ section.space-section {
   transform: translate3d(-30px, 0, 0);
 }
 
-.caseDescricao h2 {
-  font-size: 1.8rem;
+.portfolio-foto::after {
+  content: '';
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, rgba(51, 51, 51, 0.5)), to(rgba(51, 51, 51, 0)));
+  background: linear-gradient(to bottom, rgba(51, 51, 51, 0.5) 0, rgba(51, 51, 51, 0) 100%);
+  -webkit-transition: opacity .35s,-webkit-transform .35s;
+  transition: opacity .35s,-webkit-transform .35s;
+  transition: opacity .35s,transform .35s;
+  transition: opacity .35s,transform .35s,-webkit-transform .35s;
+  opacity: 1;
 }
 
-.caseDescricao h3 {
-  font-size: 1.4rem;
+.quemSomos {
+  background: #FFED00;
 }
 
-.caseObjetivo .title-big {
-  font-size: 1.4rem;
+.contatoTel,
+.contatoEmail {
+  padding: 3vh 0;
+}
+
+.contatoTel p,
+.contatoEmail p {
+  margin: 0;
+  line-height: 1.3rem;
+}
+
+.contatoTel:before,
+.contatoEmail:before {
+  display: none;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f3cd";
+  width: 60px;
+}
+
+.contatoTel a,
+.contatoTel strong,
+.contatoEmail a,
+.contatoEmail strong {
+  color: #1D1D1B;
+}
+
+.contatoTel svg,
+.contatoEmail svg {
+  float: left;
+  font-size: 2.5rem;
+  margin-right: 1.2rem;
+  color: #5E5E57;
+}
+
+.contatoEmail:before {
+  content: "\f2b6";
+  font-weight: 400;
+}
+
+.contatoEmail svg {
+  float: left;
+  font-size: 2rem;
+  margin-right: 1rem;
+  margin-left: -0.3rem;
+  color: #5E5E57;
 }
 
 #blogHome .noticia {
@@ -477,5 +600,65 @@ section.space-section {
 .pagination-area .pagination li a.current {
   background: none;
   color: #F9F9F8;
+}
+
+footer.footer {
+  background: #171717;
+  color: #F9F9F8;
+}
+
+footer.footer a {
+  color: #F9F9F8;
+}
+
+.mapa {
+  width: 100vw;
+  height: 300px;
+}
+
+.mapa iframe {
+  width: 100%;
+  height: 300px;
+}
+
+.copy {
+  background: #000;
+  padding: 0.9rem 0;
+}
+
+.copy p {
+  margin: 0;
+}
+
+ul.menu-parceiros {
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0;
+}
+
+ul.menu-parceiros li {
+  margin-left: 1.4rem;
+}
+
+ul.menu-parceiros li.sinapro-pr a {
+  width: 67px;
+  height: 30px;
+  display: block;
+  background: url(../img/logo-sinapro.png) no-repeat 0 top;
+  text-indent: -9999px;
+  cursor: pointer;
+  background-size: cover;
+}
+
+ul.menu-parceiros li.cenp a {
+  width: 80px;
+  height: 30px;
+  display: block;
+  background: url(../img/logo-cenp.png) no-repeat 0 top;
+  text-indent: -9999px;
+  cursor: pointer;
+  background-size: cover;
 }
 /*# sourceMappingURL=app.css.map */

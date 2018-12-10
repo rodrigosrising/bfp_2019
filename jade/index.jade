@@ -14,13 +14,33 @@ body.body
         //main
         main.main
             include includes/banner-home
-            include includes/box-titulo
-            //- include includes/portfolio-home
+
+            //- - var titleBox = "bg-cor3"
+            //- - var pageTitle = "Quem Somos"
+
+            //- include includes/box-titulo
             include includes/quem-somos-home
+
+            - var titleBox = "bg-cor3"
+            - var pageTitle = "Portfólio"
+
+            include includes/box-titulo
+            include includes/portfolio-home
+
+            - var titleBox = "bg-cor1 bg-dark"
+            - var pageTitle = "Clientes"
+
+            include includes/box-titulo
             include includes/clientes-home
             include includes/posts-home
             include includes/case-objetivo
             include includes/case-descricao
+
+            - var titleBox = "bg-cor1 bg-dark"
+            - var pageTitle = "Contato"
+
+            include includes/box-titulo
+            include includes/content-contato
         //main
 
         //footer

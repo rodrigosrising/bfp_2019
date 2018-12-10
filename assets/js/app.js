@@ -28,41 +28,41 @@ jQuery(document).ready(function($) {
 
 
 
-    $( ".website-link" ).hover(
-        function() {
-            $("#quemSomos").addClass("bg-cor7");
-        }, function() {
-            $("#quemSomos").removeClass("bg-cor7");
-        }
-    );
-    $( ".design-link" ).hover(
-        function() {
-            $("#quemSomos").addClass("bg-cor8");
-        }, function() {
-            $("#quemSomos").removeClass("bg-cor8");
-        }
-    );
-    $( ".publicidade-link" ).hover(
-        function() {
-            $("#quemSomos").addClass("bg-cor9");
-        }, function() {
-            $("#quemSomos").removeClass("bg-cor9");
-        }
-    );
-    $( ".editorial-link" ).hover(
-        function() {
-            $("#quemSomos").addClass("bg-cor10");
-        }, function() {
-            $("#quemSomos").removeClass("bg-cor10");
-        }
-    );
-    $( ".especiais-link" ).hover(
-        function() {
-            $("#quemSomos").addClass("bg-amarelo");
-        }, function() {
-            $("#quemSomos").removeClass("bg-amarelo");
-        }
-    );
+    // $( ".website-link" ).hover(
+    //     function() {
+    //         $("#quemSomos").addClass("bg-cor7");
+    //     }, function() {
+    //         $("#quemSomos").removeClass("bg-cor7");
+    //     }
+    // );
+    // $( ".design-link" ).hover(
+    //     function() {
+    //         $("#quemSomos").addClass("bg-cor8");
+    //     }, function() {
+    //         $("#quemSomos").removeClass("bg-cor8");
+    //     }
+    // );
+    // $( ".publicidade-link" ).hover(
+    //     function() {
+    //         $("#quemSomos").addClass("bg-cor9");
+    //     }, function() {
+    //         $("#quemSomos").removeClass("bg-cor9");
+    //     }
+    // );
+    // $( ".editorial-link" ).hover(
+    //     function() {
+    //         $("#quemSomos").addClass("bg-cor10");
+    //     }, function() {
+    //         $("#quemSomos").removeClass("bg-cor10");
+    //     }
+    // );
+    // $( ".especiais-link" ).hover(
+    //     function() {
+    //         $("#quemSomos").addClass("bg-amarelo");
+    //     }, function() {
+    //         $("#quemSomos").removeClass("bg-amarelo");
+    //     }
+    // );
 
 
 

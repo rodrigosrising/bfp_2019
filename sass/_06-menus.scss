@@ -39,15 +39,11 @@
                     margin: 0;
                     font-weight: $bold;
                     transition: 0.3s all ease-in-out;
+                    color: $branco;
                 }
                 &:hover{
                     h1{
-                        color: $branco;
-                    }
-                }
-                &:hover ~ a{
-                    h1{
-                        color: rgba($branco, 0.3);
+                        color: $cor1;
                     }
                 }
             }

@@ -39,14 +39,26 @@
                     margin: 0;
                     font-weight: $bold;
                     transition: 0.3s all ease-in-out;
-                    color: $branco;
+                    color: $cor1;
                 }
                 &:hover{
                     h1{
-                        color: $cor1;
+                        color: $branco;
                     }
                 }
             }
+        }
+    }
+}
+
+.social-media{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    li{
+        padding: 2vh;
+        a{
+            color: $cor1;
         }
     }
 }

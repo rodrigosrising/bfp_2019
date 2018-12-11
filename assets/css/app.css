@@ -269,6 +269,18 @@ h6 {
   color: #F9F9F8;
 }
 
+.bg-dark a {
+  color: #F9F9F8;
+}
+
+.bg-light {
+  color: #1D1D1B;
+}
+
+.bg-light a {
+  color: #1D1D1B;
+}
+
 .button {
   text-transform: uppercase;
   font-weight: 700;
@@ -278,6 +290,13 @@ h6 {
   width: auto;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
+}
+
+.button.homePortfolioLink {
+  margin: 0;
+  width: 100vw;
+  background: #FFED00;
+  color: #1D1D1B;
 }
 
 .header {
@@ -345,10 +364,28 @@ h6 {
   font-weight: 700;
   -webkit-transition: 0.3s all ease-in-out;
   transition: 0.3s all ease-in-out;
-  color: #FFF;
+  color: #1D1D1B;
 }
 
 .menuFazemos li a:hover h1 {
+  color: #FFF;
+}
+
+.social-media {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.social-media li {
+  padding: 2vh;
+}
+
+.social-media li a {
   color: #1D1D1B;
 }
 
@@ -380,6 +417,121 @@ footer.space-section {
   font-weight: 700;
   font-size: 54px;
   line-height: 1;
+}
+
+.quemSomos h5 {
+  font-weight: 300;
+  font-size: 1.5rem;
+}
+
+.quemSomosLinkContainer {
+  width: 50%;
+  float: left;
+  position: relative;
+  overflow: hidden;
+}
+
+.quemSomosLinkContainer.small {
+  width: 25%;
+}
+
+.quemSomosLinkContainer .inner {
+  padding: 2vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+
+.quemSomosLinkContainer .inner .project-title {
+  font-size: 1.7rem;
+}
+
+.quemSomosLinkContainer .link {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.quemSomosLinkContainer:hover .portfolio-foto {
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+
+.quemSomosLinkContainer:hover .portfolio-foto::after {
+  opacity: 0;
+  -webkit-transform: translate3d(0, -50px, 0);
+  transform: translate3d(0, -50px, 0);
+}
+
+.quemSomosLinkHome .square,
+.quemSomosLinkPage .square {
+  height: 100%;
+  width: 100%;
+}
+
+.quemSomosLinkHome .square .portfolio-foto,
+.quemSomosLinkPage .square .portfolio-foto {
+  height: 900px;
+}
+
+.quemSomosLinkHome .square2,
+.quemSomosLinkPage .square2 {
+  height: 100%;
+  width: 100%;
+}
+
+.quemSomosLinkHome .square2 .portfolio-foto,
+.quemSomosLinkPage .square2 .portfolio-foto {
+  height: 450px;
+}
+
+.quemSomosLinkHome .rect,
+.quemSomosLinkPage .rect {
+  height: 50%;
+  width: 100%;
+}
+
+.quemSomosLinkHome .rect .portfolio-foto,
+.quemSomosLinkPage .rect .portfolio-foto {
+  height: 450px;
+}
+
+.quemSomosLink-foto {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  left: 0;
+  top: 0;
+  background-size: cover;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  width: calc(100% + 50px);
+  -webkit-transition: opacity .4s, -webkit-transform .4s;
+  transition: opacity .4s, -webkit-transform .4s;
+  transition: opacity .4s, transform .4s;
+  transition: opacity .4s, transform .4s, -webkit-transform .4s;
+  -webkit-transform: translate3d(-30px, 0, 0);
+  transform: translate3d(-30px, 0, 0);
+}
+
+.quemSomosLink-foto::after {
+  content: '';
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, rgba(51, 51, 51, 0.5)), to(rgba(51, 51, 51, 0)));
+  background: linear-gradient(to bottom, rgba(51, 51, 51, 0.5) 0, rgba(51, 51, 51, 0) 100%);
+  -webkit-transition: opacity .35s,-webkit-transform .35s;
+  transition: opacity .35s,-webkit-transform .35s;
+  transition: opacity .35s,transform .35s;
+  transition: opacity .35s,transform .35s,-webkit-transform .35s;
+  opacity: 1;
 }
 
 .breadcrumbsContainer .breadcrumbs {
@@ -444,8 +596,14 @@ footer.space-section {
 
 .portfolioContainer .inner {
   padding: 2vw;
-  position: relative;
+  position: absolute;
+  top: 0;
+  left: 0;
   z-index: 2;
+}
+
+.portfolioContainer .inner .project-title {
+  font-size: 1.7rem;
 }
 
 .portfolioContainer .link {
@@ -524,10 +682,6 @@ footer.space-section {
   opacity: 1;
 }
 
-.quemSomos {
-  background: #FFED00;
-}
-
 .contatoTel,
 .contatoEmail {
   padding: 3vh 0;
@@ -556,7 +710,7 @@ footer.space-section {
 .contatoTel strong,
 .contatoEmail a,
 .contatoEmail strong {
-  color: #1D1D1B;
+  color: #F9F9F8;
 }
 
 .contatoTel svg,
@@ -564,7 +718,7 @@ footer.space-section {
   float: left;
   font-size: 2.5rem;
   margin-right: 1.2rem;
-  color: #5E5E57;
+  color: #FFED00;
 }
 
 .contatoEmail:before {
@@ -577,7 +731,21 @@ footer.space-section {
   font-size: 2rem;
   margin-right: 1rem;
   margin-left: -0.3rem;
-  color: #5E5E57;
+  color: #FFED00;
+}
+
+.tagsBox .label {
+  background: #FFED00;
+  color: #1D1D1B;
+  font-weight: 700;
+  margin-right: 4px;
+  margin-bottom: 2px;
+  text-transform: uppercase;
+}
+
+.bg-light .label {
+  background: #171717;
+  color: #F7F7F4;
 }
 
 #blogHome .noticia {

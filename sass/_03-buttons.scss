@@ -7,4 +7,10 @@
     width: auto;
     -webkit-transition: all 0.5s ease;
     transition: all 0.5s ease;
+    &.homePortfolioLink{
+        margin: 0;
+        width: 100vw;
+        background: $amarelo;
+        color: $cor1;
+    }
 }

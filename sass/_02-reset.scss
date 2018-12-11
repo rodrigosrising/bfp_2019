@@ -204,4 +204,13 @@ h6 {
 }
 .bg-dark{
     color: $cor2;
+    a{
+        color: $cor2;
+    }
+}
+.bg-light{
+    color: $cor1;
+    a{
+        color: $cor1;
+    }
 }

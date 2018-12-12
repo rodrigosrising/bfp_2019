@@ -5,24 +5,35 @@ jQuery(document).ready(function($) {
 
     new WOW().init(); // scroll animation effects
 
-    // $(".navButton").click(function () {
-    //     $(".responsiveNav").addClass("visibleNav");
-    //     $(".body").addClass("scrollLock");
-    // });
+    $(".navButton").click(function () {
+        $("html").toggleClass("scrollLock");
+        $(".body").toggleClass("open");
+    });
 
 
     // $(".responsiveNavCloseButton").click(function () {
-    //     $(".responsiveNav").removeClass("visibleNav");
-    //     $(".body").removeClass("scrollLock");
+    //     $("html").removeClass("scrollLock");
+    //     $(".body").removeClass("open");
     // });
-    // $(document).keydown(function (e) {
-    //     // ESCAPE key pressed
-    //     if (e.keyCode == 27) {
-    //         $(".responsiveNav").removeClass("visibleNav");
-    //         $(".body").removeClass("scrollLock");
+
+
+    // $( ".navButton" ).toggleClass(function() {
+    //     if ( $( this ).parent().is( ".bar" ) ) {
+    //         $("html").addClass("scrollLock");
+    //         $(".body").addClass("open");
+    //     } else {
+    //         $("html").removeClass("scrollLock");
+    //         $(".body").removeClass("open");
     //     }
     // });
 
+    $(document).keydown(function (e) {
+        // ESCAPE key pressed
+        if (e.keyCode == 27) {
+            $("html").removeClass("scrollLock");
+            $(".body").removeClass("open");
+        }
+    });
 
 
 

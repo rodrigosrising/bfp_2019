@@ -9,6 +9,15 @@ html {
 
 /*==========================NOVO=============================*/
 
+/* Medium and up */
+@media screen and (min-width: 40em) {
+    .fixed{
+        position: fixed;
+    }
+}
+.scrollLock{
+    overflow: hidden!important;
+}
 :focus {
     outline: none;
 }

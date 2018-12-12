@@ -1,5 +1,12 @@
 #blogHome{
     .noticia{
         width: 100%;
+        &Box{
+            h4{
+                a{
+                    color: $amarelo;
+                }
+            }
+        }
     }
 }

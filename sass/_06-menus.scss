@@ -8,6 +8,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
     // border-right: 1px solid lighten($cor3, 17);
 }
 .menuHeader{
@@ -55,10 +56,105 @@
     list-style: none;
     display: flex;
     justify-content: center;
+    margin: 0;
     li{
         padding: 2vh;
         a{
             color: $cor1;
+        }
+    }
+    &-menu{
+        justify-content: flex-start;
+        li{
+            padding: 2vh 4vh 2vh 0;
+            a{
+                color: $amarelo;
+            }
+        }
+    }
+}
+
+.responsiveNav{
+    background-color: rgba($cor2, 1);
+    min-height: calc(100vh - 50px);
+    width: 100vw;
+    height: calc(100% - 50px);
+    margin-top: 50px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9;
+    overflow-y: auto;
+
+    transform: translateY(-100vh);
+    transition: all 0.5s ease-in-out;
+
+    .innerNav{
+        padding: 6vh 4vh;
+        color: $cor3;
+        height: 100%;
+        @media screen and (max-width: 39.9375em) {
+            h2{
+                font-size: 3rem;
+            }
+        }
+        &.side{
+            background: $cor1;
+            color: $cor2;
+            strong{
+                color: $cor3;
+            }
+            i, svg{
+                color: $amarelo;
+            }
+        }
+        .menu{
+            margin-bottom: 2vh;
+            li{
+                a{
+                    font-size: 1.6rem;
+                    font-weight: $light;
+                    margin: 0.7vh 0;
+                    color: $cor2;
+                }
+            }
+        }
+        &-menu{
+            background: darken($cor6, 2);
+            overflow-x: hidden;
+            overflow-y: hidden;
+            min-height: 100vh;
+        }
+    }
+}
+.open{
+    .responsiveNav{
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+        // transition: all 0.5s ease-in-out;
+    }
+}
+/* Medium and up */
+@media screen and (min-width: 40em) {
+    .responsiveNav{
+        overflow-y: hidden;
+        .innerNav{
+            padding: 6vh 4vh;
+            &-menu{
+                background: darken($cor6, 2);
+                overflow-y: scroll;
+                height: 100vh;
+            }
+        }
+    }
+}
+
+/* Large and up */
+@media screen and (min-width: 64em) {
+    .responsiveNav{
+        .innerNav{
+            padding: 6vh;
         }
     }
 }

@@ -1,6 +1,65 @@
 .banner{
     &Container{
-        height: calc(100vh - 50px);
+        height: auto;
         background-color: $cor1;
+        video{
+            height: 100%;
+            width: 100vw;
+            margin: 0;
+            padding: 0;
+        }
+    }
+    &Portfolio{
+        position: relative;
+        &Info{
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100vw;
+            padding: 6vh 0;
+            z-index: 5;
+            p{
+                font-weight: $normal;
+                text-transform: uppercase;
+            }
+        }
+        .portfolioCover{
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 100%;
+            width: 100vw;
+        }
+    }
+}
+
+/* Medium and up */
+@media screen and (min-width: 40em) {
+    .banner{
+        &Container{
+            height: calc(100% - 50px);
+            video{
+                height: 100%;
+                width: 100%;
+                margin: 0;
+                padding: 0;
+            }
+        }
+    }
+}
+
+/* Large and up */
+@media screen and (min-width: 64em) {
+    .banner{
+        &Container{
+            height: calc(100vh - 50px);
+            background-color: $cor1;
+            video{
+                height:auto;
+                width: 100vw;
+                margin: 0;
+                padding: 0;
+            }
+        }
     }
 }

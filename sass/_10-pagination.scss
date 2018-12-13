@@ -21,17 +21,23 @@
 
 .pagination-area{
     .pagination{
-        li, li a{
-            color: $cor1;
-            font-weight: bold;
-            &:hover{
-                background: none;
-                color: $cor2;
+        li{
+            a{
+                color: $cor1;
+                font-weight: bold;
+                font-weight: $normal;
+                &:hover{
+                    background: $cor6;
+                    color: $cor2;
+                }
             }
             &.current{
-                background: none;
+                background: $cor6;
                 color: $cor2;
             }
+        }
+        .disabled{
+            color: $cor5;
         }
     }
 }

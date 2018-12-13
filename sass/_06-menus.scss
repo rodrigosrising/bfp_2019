@@ -75,7 +75,7 @@
 }
 
 .responsiveNav{
-    background-color: rgba($cor2, 1);
+    // background-color: rgba($cor2, 1);
     min-height: calc(100vh - 50px);
     width: 100vw;
     height: calc(100% - 50px);
@@ -132,13 +132,22 @@
         opacity: 1;
         visibility: visible;
         transform: translateY(0);
-        // transition: all 0.5s ease-in-out;
+        transition: all 0.5s ease-in-out;
+        .innerNav{
+            &.side{
+                transform: translateX(0%);
+            }
+            &-menu{
+                transform: translateX(0%);
+            }
+        }
     }
 }
 /* Medium and up */
 @media screen and (min-width: 40em) {
     .responsiveNav{
         overflow-y: hidden;
+        visibility: hidden;
         .innerNav{
             padding: 6vh 4vh;
             &-menu{
@@ -153,8 +162,36 @@
 /* Large and up */
 @media screen and (min-width: 64em) {
     .responsiveNav{
+        transform: translateY(0vh);
+        visibility: hidden;
         .innerNav{
             padding: 6vh;
+            &.side{
+                transform: translateX(100%);
+                transition: all 0.5s ease-in-out;
+            }
+            &-menu{
+                transform: translateX(-100%);
+                transition: all 0.5s ease-in-out;
+                border-right: 3px solid $preto;
+                padding-bottom: 8rem;
+            }
+        }
+    }
+    .open{
+        .responsiveNav{
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+            transition: all 0.5s ease-in-out;
+            .innerNav{
+                &.side{
+                    transform: translateX(0%);
+                }
+                &-menu{
+                    transform: translateX(0%);
+                }
+            }
         }
     }
 }

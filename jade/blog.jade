@@ -1,0 +1,33 @@
+doctype
+html(class="no-js", lang="pt-BR", dir="ltr")
+
+head
+include includes/head
+//css
+
+body.body
+    .bodyContainer
+        //header
+        include includes/header
+        //header
+
+        //main
+        main.main
+
+            - var titleBox = "bg-cor3 bg-light"
+            - var pageTitle = "Blog"
+
+            include includes/box-titulo
+            include includes/blog-list
+
+            include includes/social-media
+            include includes/tags
+        //main
+
+        //footer
+        include includes/footer
+        //footer
+
+    //scripts
+    include includes/foot
+    //scripts

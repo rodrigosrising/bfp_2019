@@ -10,3 +10,100 @@
         }
     }
 }
+
+.blog{
+    &List{
+        .noticia{
+            padding-bottom: 0.5rem;
+            margin-bottom: 2rem;
+            border-bottom: 1px solid lighten($cor4, 27);
+            &Box{
+                &-header{
+                    font-weight: $light;
+                    padding: 0 0 2vh;
+                    .entry-category{
+                        margin-bottom: 0.5rem;
+                    }
+                }
+                &-body{
+                    padding: 2vh 0;
+                }
+            }
+            &-single{
+                border-bottom: none;
+                margin-bottom: 0;
+            }
+        }
+        .widget{
+            &-area{
+                padding-left: 2rem;
+            }
+            &-sidebar{
+                margin-bottom: 3rem;
+                .search-form{
+                    .busca-campo-top{
+                        margin-bottom: 0;
+                        padding: 22px;
+                    }
+                    .submit-button{
+                        background-color: $cor6;
+                    }
+                }
+                ul{
+                    list-style-type: square;
+                    li{
+                        border-bottom: 1px solid lighten($cor4, 30);
+                        padding: 0.5rem 0;
+                    }
+                }
+            }
+        }
+        .share-buttons-box{
+            p{
+                margin: 0;
+            }
+            .facebook{
+                background: #3b5998;
+                color: $branco;
+            }
+            .twitter{
+                background: #1da1f2;
+                color: $branco;
+            }
+            .linkedin{
+                background: #0077b5;
+                color: $branco;
+            }
+            .google-plus{
+                background: #dc4e41;
+                color: $branco;
+            }
+        }
+    }
+}
+
+/* Medium and up */
+@media screen and (min-width: 40em) {
+    .blog{
+        &List{
+            .widget{
+                &-area{
+                    padding-left: 1rem;
+                }
+            }
+        }
+    }
+}
+
+/* Large and up */
+@media screen and (min-width: 64em) {
+    .blog{
+        &List{
+            .widget{
+                &-area{
+                    padding-left: 2rem;
+                }
+            }
+        }
+    }
+}

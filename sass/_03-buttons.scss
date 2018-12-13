@@ -14,3 +14,19 @@
         color: $cor1;
     }
 }
+.bg-dark{
+    .button{
+        background: $amarelo;
+        color: $cor1;
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+.bg-light{
+    .button{
+        background: $cor1;
+        color: $cor2;
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}

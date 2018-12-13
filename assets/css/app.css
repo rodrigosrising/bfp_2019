@@ -305,6 +305,20 @@ h6 {
   color: #1D1D1B;
 }
 
+.bg-dark .button {
+  background: #FFED00;
+  color: #1D1D1B;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.bg-light .button {
+  background: #1D1D1B;
+  color: #F9F9F8;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
 .header {
   position: fixed;
   top: 0;

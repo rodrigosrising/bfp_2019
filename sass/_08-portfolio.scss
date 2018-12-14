@@ -59,7 +59,22 @@
         }
     }
 }
-
+// CASES
+.case{
+    &Descricao{
+        h2{
+            font-size: 1.8rem;
+        }
+        h3{
+            font-size: 1.4rem;
+        }
+    }
+    &Objetivo{
+        .title-big{
+            font-size: 1.4rem;
+        }
+    }
+}
 /* Medium and up */
 @media screen and (min-width: 40em) {
     // PORTFOLIO

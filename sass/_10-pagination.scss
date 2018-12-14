@@ -20,6 +20,8 @@
 
 
 .pagination-area{
+    padding-top: 1vh;
+    padding-bottom: 2vh;
     .pagination{
         li{
             a{
@@ -38,6 +40,33 @@
         }
         .disabled{
             color: $cor5;
+        }
+    }
+}
+/* Medium and up */
+@media screen and (min-width: 40em) {
+    .pagination-area{
+        padding-top: 7vh;
+        padding-bottom: 0;
+        .pagination{
+            li{
+                a{
+                    color: $cor1;
+                    font-weight: bold;
+                    font-weight: $normal;
+                    &:hover{
+                        background: $cor6;
+                        color: $cor2;
+                    }
+                }
+                &.current{
+                    background: $cor6;
+                    color: $cor2;
+                }
+            }
+            .disabled{
+                color: $cor5;
+            }
         }
     }
 }

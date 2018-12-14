@@ -155,6 +155,27 @@
                 overflow-y: scroll;
                 height: 100vh;
             }
+            &.side{
+                .contato{
+                    &Local{
+                        display: flex;
+                        flex-direction: row;
+                        text-align: left;
+                        align-items: center;
+                        justify-content: flex-start;
+                        &:before{
+                            content: "\f3c5";
+                            font-weight: 900;
+                        }
+                        svg{
+                            font-size: 2.2rem;
+                            margin-right: 1.3rem;
+                            margin-bottom: 0;
+                            color: $amarelo;
+                        }
+                    }
+                }
+            }
         }
     }
 }

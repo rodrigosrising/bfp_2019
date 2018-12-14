@@ -1,10 +1,9 @@
 section, footer{
     overflow: hidden;
     transition: 0.3s background-color ease-in-out;
-    // border-top: 1px solid lighten($cor4, 30);
     &.space-section{
-        padding-top: 10vh;
-        padding-bottom: 10vh;
+        padding-top: 7vh;
+        padding-bottom: 7vh;
     }
 }
 .bodyContainer{
@@ -15,7 +14,7 @@ section, footer{
 
 .title-big {
     font-weight: $bold;
-    font-size: 54px;
+    font-size: 38px;
     line-height: 1;
 }
 
@@ -26,15 +25,13 @@ section, footer{
         font-size: 1.5rem;
     }
 }
+
 .quemSomosLink{
     &Container{
-        width: 50%;
+        width: 100vw;
         float: left;
         position: relative;
         overflow: hidden;
-        &.small{
-            width: 25%;
-        }
         .inner{
             padding: 2vw;
             position: absolute;
@@ -53,7 +50,7 @@ section, footer{
             left: 0;
         }
         &:hover{
-            .portfolio-foto{
+            .quemSomosLink-foto{
                 transform: scale(1);
                 &::after {
                     opacity: 0;
@@ -63,37 +60,14 @@ section, footer{
             }
         }
     }
-    &Home, &Page{
-        .square{
-            height: 100%;
-            width: 100%;
-            .portfolio-foto{
-                height: 900px;
-            }
-        }
-        .square2{
-            height: 100%;
-            width: 100%;
-            .portfolio-foto{
-                height: 450px;
-            }
-        }
-
-        .rect{
-            height: 50%;
-            width: 100%;
-            .portfolio-foto{
-                height: 450px;
-            }
-        }
-    }
     &-foto{
-        width: 100%;
-        height: 100%;
+        width: 100vw;
+        height: 100vw;
         position: relative;
         left: 0;
         top: 0;
         background-size: cover;
+        background-position: center top;
         backface-visibility: hidden;
         width: calc(100% + 50px);
         transition: opacity .4s, transform .4s;
@@ -112,6 +86,7 @@ section, footer{
         }
     }
 }
+
 .boxTitulo{
     border-bottom: 1px solid lighten($cor3, 30);
 }
@@ -153,27 +128,15 @@ section, footer{
     }
 }
 
-
-// CASES
-.case{
-    &Descricao{
-        h2{
-            font-size: 1.8rem;
-        }
-        h3{
-            font-size: 1.4rem;
-        }
-    }
-    &Objetivo{
-        .title-big{
-            font-size: 1.4rem;
-        }
-    }
-}
-
 .contato{
+    &FormBox{
+        padding-top: 7vh;
+        padding-bottom: 7vh;
+    }
     &Tel, &Email, &Local{
         padding: 3vh 0;
+        display: flex;
+        align-items: center;
         p{
             margin: 0;
             line-height: 1.3rem;
@@ -193,15 +156,9 @@ section, footer{
             color: $cor2;
         }
         svg{
-            float: left;
             font-size: 2.5rem;
             margin-right: 1.2rem;
             color: $amarelo;
-        }
-    }
-    &Tel{
-        svg{
-            margin: 0.6rem 1.2rem 0.6rem 0;
         }
     }
     &Email{
@@ -210,7 +167,6 @@ section, footer{
             font-weight: 400;
         }
         svg{
-            float: left;
             font-size: 2rem;
             margin-right: 1rem;
             margin-left: -0.3rem;
@@ -223,7 +179,6 @@ section, footer{
             font-weight: 900;
         }
         svg{
-            float: left;
             font-size: 2rem;
             margin-right: 1.3rem;
             color: $amarelo;
@@ -244,5 +199,80 @@ section, footer{
     .label{
         background: $cor6;
         color: $cor3;
+    }
+}
+
+/* Medium and up */
+@media screen and (min-width: 40em) {
+    .title-big {
+        font-weight: $bold;
+        font-size: 44px;
+        line-height: 1;
+    }
+
+    .quemSomosLink{
+        &Container{
+            width: 33.33vw;
+        }
+        &-foto{
+            height: 33.33vw;
+        }
+    }
+}
+
+/* Large and up */
+@media screen and (min-width: 64em) {
+    section, footer{
+        &.space-section{
+            padding-top: 10vh;
+            padding-bottom: 10vh;
+        }
+    }
+    .title-big {
+        font-weight: $bold;
+        font-size: 54px;
+        line-height: 1;
+    }
+    .contato{
+        &Local{
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+            svg{
+                font-size: 2.4rem;
+                margin-right: 0;
+                margin-bottom: 1.2rem;
+                color: $amarelo;
+            }
+        }
+    }
+    .quemSomosLink{
+        &Container{
+            width: 33.33vw;
+            &:nth-child(1){
+                width: 50vw;
+                height: 50vw;
+                .quemSomosLink-foto{
+                    height: 50vw;
+                    width: calc(100% + 50px);
+                }
+            }
+            &:nth-child(2), &:nth-child(3){
+                width: 25vw;
+                .quemSomosLink-foto{
+                    height: 25vw;
+                    width: calc(100% + 50px);
+                }
+            }
+            &:nth-child(4){
+                width: 50vw;
+                height: 25vw;
+                .quemSomosLink-foto{
+                    height: 25vw;
+                    width: calc(100% + 50px);
+                }
+            }
+        }
     }
 }

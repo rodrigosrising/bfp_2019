@@ -54,6 +54,9 @@
         &Container{
             height: calc(100vh - 50px);
             background-color: $cor1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             video{
                 height:auto;
                 width: 100vw;

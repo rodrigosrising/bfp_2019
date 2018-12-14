@@ -8,28 +8,29 @@ section.contato
                     .grid-x.grid-margin-x.grid-padding-x
 
                         .cell.small-12.medium-10.medium-offset-1.wow.slideInUp
-                            h1.title-big Fale Conosco #[span.amarelo . ]
-                            br
-                            br
-                            p Nada melhor que uma boa conversa para esclarecer dúvidas e questões pendentes! Ligue pra gente, será um prazer falar com você!
+                            .contatoFormBox
+                                h1.title-big Fale Conosco #[span.amarelo . ]
+                                br
+                                br
+                                p Nada melhor que uma boa conversa para esclarecer dúvidas e questões pendentes! Ligue pra gente, será um prazer falar com você!
 
-                            form(action="")
-                                .grid-container.full
-                                    .grid-x.grid-padding-x
-                                        .cell.small-12.medium-6
-                                            label Nome
-                                                input(type="text")
-                                        .cell.small-12.medium-6
-                                            label Telefone
-                                                input(type="tel")
-                                        .cell.small-12
-                                            label Email
-                                                input(type="email")
-                                        .cell.small-12
-                                            label Mensagem
-                                                textarea(name="", cols="30", rows="10")
-                                        .cell.small-12
-                                            input(type="submit", class="button buttonWide uppercase")
+                                form(action="")
+                                    .grid-container.full
+                                        .grid-x.grid-padding-x
+                                            .cell.small-12.medium-6
+                                                label Nome
+                                                    input(type="text")
+                                            .cell.small-12.medium-6
+                                                label Telefone
+                                                    input(type="tel")
+                                            .cell.small-12
+                                                label Email
+                                                    input(type="email")
+                                            .cell.small-12
+                                                label Mensagem
+                                                    textarea(name="", cols="30", rows="10")
+                                            .cell.small-12
+                                                input(type="submit", class="button buttonWide uppercase")
 
 section.space-section.bg-cor1.bg-dark
     .grid-container.fluid
@@ -43,12 +44,13 @@ section.space-section.bg-cor1.bg-dark
                         .cell.small-12.medium-6.large-8.wow.slideInUp
                             .grid-container
                                 .grid-x.grid-margin-x.grid-padding-x.align-middle
-                                    .cell.small-6.text-center
-                                        i.fas.fa-map-marker-alt.fa-2x.amarelo
-                                        h5.cor2 Curitiba
-                                        p  Av Cândido Hartmann, 528#[br]sala 56 - Curitiba – PR
+                                    .cell.small-12.large-6
+                                        .contatoLocal
+                                            div
+                                                h5.cor2 Curitiba
+                                                p  Av Cândido Hartmann, 528#[br]sala 56 - Curitiba – PR
 
-                                    .cell.small-6
+                                    .cell.small-12.large-6
                                         .contatoTel
                                             p Seg à Sex 9h às 18h#[br]#[strong +55 41 3151-2607]#[br]#[strong +55 41 99979-3103]
                                         .contatoEmail

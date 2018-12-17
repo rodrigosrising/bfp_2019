@@ -11,16 +11,29 @@
     }
     &Portfolio{
         position: relative;
-        &Info{
+        min-height: 350px;
+        padding-top: 7vh;
+        padding-bottom: 4vh;
+        background-size: cover;
+        background-position: center top;
+        background-repeat: no-repeat;
+        align-items: flex-start;
+        align-items: flex-start!important;
+        &:after{
+            content: " ";
             position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
             top: 0;
             left: 0;
-            height: 100%;
-            width: 100vw;
-            padding: 6vh 0;
+        }
+        &Info{
+            position: relative;
+            width: 100%;
             z-index: 5;
             p{
-                font-weight: $bold;
+                font-weight: $medium;
                 text-transform: uppercase;
             }
         }
@@ -45,6 +58,18 @@
                 padding: 0;
             }
         }
+        &Portfolio{
+            &:after{
+                content: " ";
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0);
+                top: 0;
+                left: 0;
+                // z-index: -1;
+            }
+        }
     }
 }
 
@@ -57,11 +82,17 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            position: relative;
             video{
-                height:auto;
-                width: 100vw;
-                margin: 0;
-                padding: 0;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                min-width: 100%;
+                min-height: 100%;
+                width: auto;
+                height: auto;
+                z-index: 1;
+                transform: translateX(-50%) translateY(-50%);
             }
         }
     }

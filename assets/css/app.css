@@ -490,7 +490,7 @@ h6 {
 .responsiveNav .innerNav .menu li a {
   font-size: 1.6rem;
   font-weight: 300;
-  margin: 0.7vh 0;
+  margin: 0.3vh 0;
   color: #F9F9F8;
 }
 
@@ -538,20 +538,36 @@ h6 {
 
 .bannerPortfolio {
   position: relative;
+  min-height: 350px;
+  padding-top: 7vh;
+  padding-bottom: 4vh;
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  align-items: flex-start !important;
+}
+
+.bannerPortfolio:after {
+  content: " ";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  top: 0;
+  left: 0;
 }
 
 .bannerPortfolioInfo {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100vw;
-  padding: 6vh 0;
+  position: relative;
+  width: 100%;
   z-index: 5;
 }
 
 .bannerPortfolioInfo p {
-  font-weight: 700;
+  font-weight: 500;
   text-transform: uppercase;
 }
 
@@ -702,12 +718,10 @@ footer.space-section {
 
 .bg-dark .breadcrumbsContainer .breadcrumbs li {
   color: #F9F9F8;
-  font-weight: 700;
 }
 
 .bg-dark .breadcrumbsContainer .breadcrumbs li:not(:last-child)::after {
   color: #F9F9F8;
-  font-weight: 700;
 }
 
 .bg-dark .breadcrumbsContainer .breadcrumbs a,
@@ -801,6 +815,7 @@ footer.space-section {
   margin-right: 4px;
   margin-bottom: 2px;
   text-transform: uppercase;
+  cursor: pointer;
 }
 
 .bg-light .label {
@@ -884,6 +899,11 @@ footer.space-section {
   transition: opacity .35s,transform .35s;
   transition: opacity .35s,transform .35s,-webkit-transform .35s;
   opacity: 1;
+}
+
+.portfolioPage img {
+  margin: auto;
+  display: block;
 }
 
 .caseDescricao h2 {
@@ -1168,6 +1188,16 @@ ul.menu-parceiros li.cenp a {
     padding: 0;
   }
 
+  .bannerPortfolio:after {
+    content: " ";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0);
+    top: 0;
+    left: 0;
+  }
+
   .title-big {
     font-weight: 700;
     font-size: 44px;
@@ -1311,7 +1341,7 @@ ul.menu-parceiros li.cenp a {
     -webkit-transition: all 0.5s ease-in-out;
     transition: all 0.5s ease-in-out;
     border-right: 3px solid #000;
-    padding-bottom: 8rem;
+    padding-bottom: 5rem;
   }
 
   .open .responsiveNav {
@@ -1345,13 +1375,20 @@ ul.menu-parceiros li.cenp a {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
+    position: relative;
   }
 
   .bannerContainer video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
     height: auto;
-    width: 100vw;
-    margin: 0;
-    padding: 0;
+    z-index: 1;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
   }
 
   section.space-section,

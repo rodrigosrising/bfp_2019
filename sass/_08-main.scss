@@ -115,10 +115,8 @@ section, footer{
             color: $cor2;
             li{
                 color: $cor2;
-                font-weight: $bold;
                 &:not(:last-child)::after{
                     color: $cor2;
-                    font-weight: $bold;
                 }
             }
             a, .disabled{
@@ -194,6 +192,7 @@ section, footer{
         margin-right: 4px;
         margin-bottom: 2px;
         text-transform: uppercase;
+        cursor: pointer;
     }
 }
 .bg-light{

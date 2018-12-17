@@ -41,6 +41,7 @@ html {
   color: #1D1D1B;
   font-family: "Gtwall", sans-serif;
   font-weight: 300;
+  width: 100vw;
 }
 
 /*==========================NOVO=============================*/
@@ -309,18 +310,19 @@ h6 {
   color: #1D1D1B;
 }
 
+.button.wide {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
 .bg-dark .button {
   background: #FFED00;
   color: #1D1D1B;
-  padding-left: 2rem;
-  padding-right: 2rem;
 }
 
 .bg-light .button {
   background: #1D1D1B;
   color: #F9F9F8;
-  padding-left: 2rem;
-  padding-right: 2rem;
 }
 
 .header {
@@ -477,6 +479,10 @@ h6 {
   color: #FFED00;
 }
 
+.responsiveNav .innerNav.side h5 {
+  margin-bottom: 0;
+}
+
 .responsiveNav .innerNav .menu {
   margin-bottom: 2vh;
 }
@@ -565,6 +571,7 @@ footer {
   overflow: hidden;
   -webkit-transition: 0.3s background-color ease-in-out;
   transition: 0.3s background-color ease-in-out;
+  width: 100vw;
 }
 
 section.space-section,
@@ -1107,6 +1114,20 @@ ul.menu-parceiros li.cenp a {
     height: 100vh;
   }
 
+  .responsiveNav .innerNav-menu::-webkit-scrollbar {
+    width: 9px;
+  }
+
+  .responsiveNav .innerNav-menu::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0);
+    background-color: transparent;
+  }
+
+  .responsiveNav .innerNav-menu::-webkit-scrollbar-thumb {
+    background-color: #1D1D1B;
+    outline: 1px solid slategrey;
+  }
+
   .responsiveNav .innerNav.side .contatoLocal {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1277,6 +1298,7 @@ ul.menu-parceiros li.cenp a {
   }
 
   .responsiveNav .innerNav.side {
+    width: 33.3333%;
     -webkit-transform: translateX(100%);
     transform: translateX(100%);
     -webkit-transition: all 0.5s ease-in-out;
